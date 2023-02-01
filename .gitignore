@@ -1,0 +1,6 @@
+node_modules/
+MochaTest.cy.js
+MochaTestAfter.cy.js
+MochaTestBefore.cy.js
+MochaTestParametrized.cy.js
+MochaTestRetries.cy.js
