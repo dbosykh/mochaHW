@@ -1,5 +1,5 @@
 describe('Block form', () => {
-    before(() => {  
+    beforeEach(() => {  
         cy.visit('https://sanitarskyi-ngx-admin.herokuapp.com/');
         cy.get('nb-card:nth-child(3) > nb-card-header').click();
         cy.get('[title~="Forms"]').click();
@@ -8,6 +8,8 @@ describe('Block form', () => {
     const data = [
         {testData: {firstName: 'Jane', lastName: 'Doe', email: 'example@gmail.com', website: 'www.com'}, 
         expectedResult: {firstName: 'Jane', lastName: 'Doe', email: 'example@gmail.com', website: 'www.com'}},
+        {testData: {firstName: 'someName', lastName: 'lastName', email: 'othereEmail@gmail.com', website: 'https.com'}, 
+        expectedResult: {firstName: 'someName', lastName: 'lastName', email: 'othereEmail@gmail.com', website: 'https.com'}}
         ]
 
     data.forEach(({testData, expectedResult}) => {
